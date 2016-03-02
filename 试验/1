@@ -1,0 +1,25 @@
+#!/usr/bin/env python
+# -*- coding: cp936 -*-
+
+def cal(value):
+    value = unicode(value,"gb2312")
+    if (len(value)>2 ):
+        if (value[-1]==u'县'):
+            return value[0:-1]
+        elif (value[-1]==u'市'):
+            return value[0:-1]
+        else:
+            return value
+    else:
+        return value
+        
+value = '漠河'
+print cal(value)
+
+
+'''
+value = unicode(value,"gb2312")
+if (value[-1]==u'县'):
+    print value[0:-1]
+    print len(value)
+'''
